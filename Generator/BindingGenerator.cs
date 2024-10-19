@@ -159,13 +159,13 @@ namespace ImGui
 		{{
 		    DockRequestType Type;
 		    Window* DockTargetWindow;
-		    DockNode* DockTargetNode;
+		    //DockNode* DockTargetNode;
 		    Window* DockPayload;
 		    Dir DockSplitDir;
 		    float DockSplitRatio;
 		    bool DockSplitOuter;
 		    Window* UndockTargetWindow;
-		    DockNode* UndockTargetNode;
+		    //DockNode* UndockTargetNode;
 		}}
 
 		[CRepr]
@@ -177,7 +177,7 @@ namespace ImGui
 		    ID             SelectedWindowId;
 		    char         SplitAxis;
 		    char                Depth;
-		    DockNodeFlags  Flags;
+		    //DockNodeFlags  Flags;
 		    Vec2ih            Pos;
 		    Vec2ih            Size;
 		    Vec2ih            SizeRef;
@@ -186,12 +186,12 @@ namespace ImGui
 		[CRepr]
 		public struct DockPreviewData
 		{{
-		    DockNode FutureNode;
+		    //DockNode FutureNode;
 		    bool IsDropAllowed;
 		    bool IsCenterAvailable;
 		    bool IsSidesAvailable;
 		    bool IsSplitDirExplicit;
-		    DockNode* SplitNode;
+		    //DockNode* SplitNode;
 		    Dir SplitDir;
 		    float SplitRatio;
 		    Rect[(.) Dir.COUNT] DropRectsDraw;
@@ -202,17 +202,18 @@ namespace ImGui
 			var viewport = ImGui.GetMainViewport();
 			ImGui.SetNextWindowPos(viewport.Pos);
 			ImGui.SetNextWindowSize(viewport.Size);
-			ImGui.SetNextWindowViewport(viewport.ID);
+			//ImGui.SetNextWindowViewport(viewport.ID);
 
 			ImGui.PushStyleVar(.WindowPadding, .(0, 0));
 			ImGui.PushStyleVar(.WindowRounding, 0.0f);
 			ImGui.PushStyleVar(.WindowBorderSize, 0.0f);
-			ImGui.WindowFlags windowFlags = .MenuBar | .NoDocking | .NoTitleBar | .NoResize | .NoMove | .NoBringToFrontOnFocus | .NoNavFocus;
+			//ImGui.WindowFlags windowFlags = .MenuBar | .NoDocking | .NoTitleBar | .NoResize | .NoMove | .NoBringToFrontOnFocus | .NoNavFocus;
+			ImGui.WindowFlags windowFlags = .MenuBar | .NoTitleBar | .NoResize | .NoMove | .NoBringToFrontOnFocus | .NoNavFocus;
 			ImGui.Begin(""MainDockspaceWindow"", null, windowFlags);
 			ImGui.PopStyleVar(3);
 
 			ImGui.ID dockspaceId = ImGui.GetID(""MainDockspace"");
-			ImGui.DockSpace(dockspaceId);
+			//ImGui.DockSpace(dockspaceId);
 			ImGui.End();
 		}}
 
@@ -233,8 +234,8 @@ namespace ImGui
 			files["ImGuiImplOpenGL2/src/ImGuiImplOpenGL2.bf"] = GenerateImplFile("ImGuiImplOpenGL2", Bindings, BackendType.OpenGL2);
 			files["ImGuiImplOpenGL3/src/ImGuiImplOpenGL3.bf"] = GenerateImplFile("ImGuiImplOpenGL3", Bindings, BackendType.OpenGL3);
 			files["ImGuiImplSDL/src/ImGuiImplSDL.bf"] = GenerateImplFile("ImGuiImplSDL2", Bindings, BackendType.SDL2);
-            files["ImGuiImplDX11/src/ImGuiImplDX11.bf"] = GenerateImplFile("ImGuiImplDX11", Bindings, BackendType.DirectX11);
-            files["ImGuiImplDX11/src/ImGuiImplWin32.bf"] = GenerateImplFile("ImGuiImplWin32", Bindings, BackendType.Win32);
+            //files["ImGuiImplDX11/src/ImGuiImplDX11.bf"] = GenerateImplFile("ImGuiImplDX11", Bindings, BackendType.DirectX11);
+            //files["ImGuiImplDX11/src/ImGuiImplWin32.bf"] = GenerateImplFile("ImGuiImplWin32", Bindings, BackendType.Win32);
 
             return files;
         }
