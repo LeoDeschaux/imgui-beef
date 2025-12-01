@@ -1,5 +1,5 @@
 FileVersion = 1
-Dependencies = { corlib = "*", corlib = "*", SDL2 = "*", ImGui = "*" }
+Dependencies = {corlib = "*", corlib = "*", SDL2 = "*"}
 
 [Project]
 Name = "ImGuiImplSDL"

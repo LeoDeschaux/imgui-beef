@@ -1,5 +1,5 @@
 FileVersion = 1
-Dependencies = {ImGui = "*", GLFW = "*"}
+Dependencies = {GLFW = "*"}
 
 [Project]
 Name = "ImGuiImplGlfw"
@@ -9,7 +9,7 @@ DefaultNamespace = "ImGui"
 LibPaths = ["$(ProjectDir)/../dist/$(Configuration)-$(Platform)/cimgui.lib"]
 
 [Configs.Debug.Win64]
-LibPaths = ["$(ProjectDir)/../dist/$(Configuration)-$(Platform)/cimgui.lib"]
+LibPaths = ["$(ProjectDir)/../ImGui/dist/$(Configuration)-$(Platform)/cimgui.lib"]
 
 [Configs.Release.Win32]
 LibPaths = ["$(ProjectDir)/../dist/$(Configuration)-$(Platform)/cimgui.lib"]

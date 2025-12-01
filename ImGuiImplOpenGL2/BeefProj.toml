@@ -1,5 +1,5 @@
 FileVersion = 1
-Dependencies = { corlib = "*" }
+Dependencies = {corlib = "*", ImGui = "*"}
 
 [Project]
 Name = "ImGuiImplOpenGL2"

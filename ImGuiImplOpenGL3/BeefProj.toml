@@ -6,7 +6,7 @@ Name = "ImGuiImplOpenGL3"
 DefaultNamespace = "imgui_beef"
 
 [Configs.Debug.Win64]
-LibPaths = ["$(ProjectDir)/../dist/$(Configuration)-$(Platform)/cimgui.lib"]
+LibPaths = ["$(ProjectDir)/../ImGui/dist/$(Configuration)-$(Platform)/cimgui.lib"]
 
 [Configs.Debug.Win32]
 LibPaths = ["$(ProjectDir)/../dist/$(Configuration)-$(Platform)/cimgui.lib"]
